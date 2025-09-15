@@ -1,0 +1,1 @@
+python -c "import backend_expenses.database as db; print('get_conn' in dir(db)); print('FINANCE_DB=', db.FINANCE_DB)"

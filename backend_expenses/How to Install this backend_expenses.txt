@@ -1,0 +1,7 @@
+C:\BUSINESS\21-Projects\monexa\backend_expenses>python -m venv .venv
+
+C:\BUSINESS\21-Projects\monexa\backend_expenses>.venv\Scripts\activate
+
+C:\BUSINESS\21-Projects\monexa\backend_expenses>pip install -r requirements.txt
+
+C:\BUSINESS\21-Projects\monexa\backend_expenses> python app.py

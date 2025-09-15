@@ -1,0 +1,2 @@
+id,tx_datetime,exp_type,total_amount,note,source,txn_id
+1,2025-09-15T18:30:00,groceries,1500.0,SuperMart Grocery Bill,generic,BILL-1001

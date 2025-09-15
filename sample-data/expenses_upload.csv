@@ -1,0 +1,81 @@
+id,tx_datetime,exp_type,total_amount,note,source,txn_id
+1,2025-09-27,amazon,517.3,,amazon,
+2,2025-09-03,amazon,733.39,,amazon,
+3,2025-09-22,amazon,851.04,,amazon,
+4,2025-09-18,amazon,655.45,,amazon,
+5,2025-09-30,amazon,1252.5,,amazon,
+6,2025-09-03,amazon,122.08,,amazon,
+7,2025-09-11,amazon,916.64,,amazon,
+8,2025-09-15,amazon,814.8,,amazon,
+9,2025-09-10,amazon,651.55,,amazon,
+10,2025-09-03,amazon,379.89,,amazon,
+11,11-09-2025,gpay,1377.26,Amazon Pay,gpay,GPAY-4587
+12,25-09-2025,gpay,1438.79,Amazon Pay,gpay,GPAY-9010
+13,09-09-2025,gpay,643.54,Amazon Pay,gpay,GPAY-8088
+14,29-09-2025,gpay,421.46,Zomato,gpay,GPAY-9350
+15,01-09-2025,gpay,802.82,Amazon Pay,gpay,GPAY-6908
+16,15-09-2025,gpay,246.76,Auto Driver,gpay,GPAY-4696
+17,21-09-2025,gpay,340.56,Amazon Pay,gpay,GPAY-5687
+18,30-09-2025,gpay,389.94,Cafe Coffee Day,gpay,GPAY-4074
+19,12-09-2025,gpay,499.55,Swiggy,gpay,GPAY-3564
+20,30-09-2025,gpay,1394.75,Amazon Pay,gpay,GPAY-5298
+21,05/09/2025,paytm,622.77,,paytm,
+22,10/09/2025,paytm,714.51,,paytm,
+23,16/09/2025,paytm,1232.2,,paytm,
+24,10/09/2025,paytm,380.76,,paytm,
+25,24/09/2025,paytm,2712.65,,paytm,
+26,08/09/2025,paytm,99.18,,paytm,
+27,01/09/2025,paytm,2640.99,,paytm,
+28,28/09/2025,paytm,1546.47,,paytm,
+29,21/09/2025,paytm,804.44,,paytm,
+30,25/09/2025,paytm,671.72,,paytm,
+31,2025-10-01,phonepe,820.23,Flipkart,phonepe,PP-7625
+32,2025-09-20,phonepe,1730.95,Flipkart,phonepe,PP-4286
+33,2025-10-01,phonepe,4900.47,Flipkart,phonepe,PP-5939
+34,2025-09-05,phonepe,4803.54,Big Bazaar,phonepe,PP-8778
+35,2025-09-25,phonepe,3284.75,Uber,phonepe,PP-7011
+36,2025-09-07,phonepe,1153.54,MedPlus,phonepe,PP-9712
+37,2025-09-24,phonepe,1831.79,Reliance Fresh,phonepe,PP-8168
+38,2025-09-14,phonepe,1502.48,Reliance Fresh,phonepe,PP-6320
+39,2025-09-19,phonepe,3091.14,Uber,phonepe,PP-5579
+40,2025-09-17,phonepe,3940.26,Uber,phonepe,PP-6309
+41,,bank_india,-5242.05,,bank_india,
+42,,bank_india,15144.77,,bank_india,
+43,,bank_india,19272.58,,bank_india,
+44,,bank_india,13653.03,,bank_india,
+45,,bank_india,-9714.63,,bank_india,
+46,,bank_india,8860.04,,bank_india,
+47,,bank_india,-4244.22,,bank_india,
+48,,bank_india,11147.52,,bank_india,
+49,,bank_india,-9275.11,,bank_india,
+50,,bank_india,14063.72,,bank_india,
+51,2025-09-22,bank_usa,1718.27,,bank_usa,BUSA-5944
+52,2025-09-02,bank_usa,-282.03,,bank_usa,BUSA-1019
+53,2025-09-19,bank_usa,1273.31,,bank_usa,BUSA-2853
+54,2025-09-05,bank_usa,1107.36,,bank_usa,BUSA-9211
+55,2025-09-19,bank_usa,1763.74,,bank_usa,BUSA-4990
+56,2025-09-19,bank_usa,428.15,,bank_usa,BUSA-7207
+57,2025-09-09,bank_usa,1154.57,,bank_usa,BUSA-9706
+58,2025-09-24,bank_usa,-111.47,,bank_usa,BUSA-6605
+59,2025-09-10,bank_usa,886.72,,bank_usa,BUSA-9709
+60,2025-09-03,bank_usa,1496.57,,bank_usa,BUSA-8557
+61,09/02/2025,bank_canada,518.82,,bank_canada,
+62,09/16/2025,bank_canada,313.1,,bank_canada,
+63,09/03/2025,bank_canada,853.5,,bank_canada,
+64,09/07/2025,bank_canada,608.01,,bank_canada,
+65,09/21/2025,bank_canada,864.15,,bank_canada,
+66,09/08/2025,bank_canada,1164.86,,bank_canada,
+67,09/20/2025,bank_canada,447.5,,bank_canada,
+68,09/06/2025,bank_canada,142.06,,bank_canada,
+69,09/30/2025,bank_canada,935.81,,bank_canada,
+70,09/23/2025,bank_canada,805.56,,bank_canada,
+71,,generic,,,generic,
+72,,generic,,,generic,
+73,,generic,,,generic,
+74,,generic,,,generic,
+75,,generic,,,generic,
+76,,generic,,,generic,
+77,,generic,,,generic,
+78,,generic,,,generic,
+79,,generic,,,generic,
+80,,generic,,,generic,

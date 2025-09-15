@@ -1,0 +1,37 @@
+/* Global + layout styles for Monexa (desktop & mobile friendly) */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Work Sans', sans-serif; }
+
+.app { display: flex; min-height: 100vh; background: #fdfdfe; color: #1f1f2e; }
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: linear-gradient(180deg, #ff4d8d, #7d4dff);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.28s ease;
+  padding-bottom: 16px;
+}
+.sidebar.collapsed { width: 60px; }
+.sidebar .brand { display:flex; align-items:center; gap:10px; padding:14px; font-weight:700; }
+.sidebar .brand .logo { width:40px; height:40px; border-radius:8px; background: rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center; font-weight:800; }
+.sidebar .toggle { padding: 10px; text-align:center; cursor:pointer; background: rgba(0,0,0,0.08); }
+.sidebar ul { list-style:none; padding: 12px; display:block; }
+.sidebar ul li { display:flex; align-items:center; gap:12px; padding:10px; margin:8px 0; border-radius:8px; cursor:pointer; transition:background 0.18s; color: #fff; text-decoration:none; }
+.sidebar ul li:hover { background: rgba(255,255,255,0.12); }
+.sidebar ul li .icon { width:20px; text-align:center; }
+
+/* Content */
+.content { flex:1; padding: 24px; }
+
+/* Cards */
+.card { background: #fff; border-radius:10px; padding:16px; box-shadow:0 8px 30px rgba(16,24,40,0.06); margin-bottom:16px; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .app { flex-direction: column; }
+  .sidebar { width:100%; flex-direction:row; overflow-x:auto; }
+  .sidebar ul { display:flex; flex-direction:row; padding:6px; gap:8px; overflow-x:auto; }
+  .content { padding:12px; }
+}

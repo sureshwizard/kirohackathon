@@ -1,0 +1,1 @@
+curl -X POST "http://127.0.0.1:8000/expenses/" -H "Content-Type: application/json" -d "{\"title\":\"Tea\",\"amount\":3.0,\"total_amount\":3.0,\"date\":\"2025-09-14\",\"tx_datetime\":\"2025-09-14T09:15:00\",\"category\":\"Food\",\"exp_type\":\"personal\",\"description\":\"Morning Tea\"}"

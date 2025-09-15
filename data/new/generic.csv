@@ -1,0 +1,11 @@
+tx_datetime,exp_type,total_amount,note,txn_id
+2025-09-15,grocery,4946.45,Medicine,GEN-1090
+2025-09-12,shopping,1278.19,Medicine,GEN-1853
+2025-09-06,health,3288.64,Movie,GEN-3002
+2025-09-20,entertainment,4467.01,Movie,GEN-8285
+2025-09-19,grocery,1374.84,Medicine,GEN-3137
+2025-09-08,health,4597.02,Clothes,GEN-3915
+2025-09-24,fuel,3626.38,Petrol,GEN-2819
+2025-09-29,grocery,1627.59,Vegetables,GEN-4504
+2025-09-05,shopping,692.83,Movie,GEN-2411
+2025-09-23,entertainment,3020.26,Movie,GEN-1697

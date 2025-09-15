@@ -1,0 +1,6 @@
+tx_datetime,exp_type,total_amount,note,txn_id
+14-09-2025,groceries,450.00,"Big Bazaar (UPI)",TXN-GPAY-0001
+14-09-2025,transport,60.50,"Auto fare (UPI)",TXN-GPAY-0002
+13-09-2025,refund,-1200.00,"Refund: MovieTheatre",TXN-GPAY-0003
+12-09-2025,subscription,199.99,"Streaming subscription (Card)",TXN-GPAY-0004
+11-09-2025,income,2500.00,"Salary credit (UPI)",TXN-GPAY-0005

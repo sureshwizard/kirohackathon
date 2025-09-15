@@ -1,0 +1,152 @@
+Nice — I created two small helpers for backend_expenses:
+
+bootstrap_db.py — creates the DB schema by running models.Base.metadata.create_all(bind=engine).
+
+db_browser.py — quick CLI that prints basic counts and a small summary (top categories, latest 5 expenses) using both SQLAlchemy session and raw sqlite3 connection.
+
+Put both files in backend_expenses/. Below are the complete files and quick usage instructions for Windows and AlmaLinux.
+
+1) backend_expenses/bootstrap_db.py
+#!/usr/bin/env python3
+"""
+bootstrap_db.py
+
+Create the SQLite database file and all tables declared in backend_expenses.models.
+Run this once before running the app (or any time you need to recreate missing tables).
+"""
+
+import sys
+from pathlib import Path
+
+# ensure package import paths work when executed from repo root
+repo_root = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(repo_root))
+
+from backend_expenses import models
+from backend_expenses.database import engine
+
+def main():
+    print("Creating database tables (if they don't exist)...")
+    models.Base.metadata.create_all(bind=engine)
+    print("Done. Tables created/verified.")
+
+if __name__ == "__main__":
+    main()
+
+2) backend_expenses/db_browser.py
+#!/usr/bin/env python3
+"""
+db_browser.py
+
+Quick diagnostics for finance.db:
+- prints file path
+- prints counts: expenses, expense_items
+- prints top 8 categories by total amount (descending)
+- prints last 5 expense rows (id, date, type, amount, note)
+
+Usage:
+    python backend_expenses/db_browser.py
+"""
+
+import sys
+from pathlib import Path
+import sqlite3
+import json
+
+# ensure package import paths work when executed from repo root
+repo_root = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(repo_root))
+
+from backend_expenses.database import FINANCE_DB, get_conn
+
+def row_to_dict(row):
+    return {k: row[k] for k in row.keys()}
+
+def main():
+    print("Monexa DB browser")
+    print("DB path:", FINANCE_DB)
+    conn = get_conn()
+    cur = conn.cursor()
+
+    try:
+        # counts
+        cur.execute("SELECT COUNT(*) as c FROM sqlite_master WHERE type='table' AND name='expenses'")
+        has_expenses_table = cur.fetchone()["c"] > 0
+
+        if not has_expenses_table:
+            print("No 'expenses' table found. Run bootstrap_db.py to create schema.")
+            return
+
+        cur.execute("SELECT COUNT(*) as cnt FROM expenses")
+        total_exp = cur.fetchone()["cnt"]
+        cur.execute("SELECT COUNT(*) as cnt FROM expense_items")
+        total_items = cur.fetchone()["cnt"]
+
+        print(f"Total expenses: {total_exp}")
+        print(f"Total expense items: {total_items}")
+
+        # top categories (by total amount)
+        cur.execute("""
+            SELECT exp_type, SUM(total_amount) as total, COUNT(*) as cnt
+            FROM expenses
+            GROUP BY exp_type
+            ORDER BY total DESC
+            LIMIT 8
+        """)
+        top_cats = [row_to_dict(r) for r in cur.fetchall()]
+        print("\nTop categories (by total amount):")
+        if top_cats:
+            for r in top_cats:
+                print(f" - {r['exp_type']}: total={r['total']} count={r['cnt']}")
+        else:
+            print(" (no data)")
+
+        # last 5 expenses
+        cur.execute("""
+            SELECT id, tx_datetime, exp_type, total_amount, note
+            FROM expenses
+            ORDER BY tx_datetime DESC
+            LIMIT 5
+        """)
+        last5 = [row_to_dict(r) for r in cur.fetchall()]
+        print("\nLast 5 expenses:")
+        if last5:
+            for r in last5:
+                print(f" - id={r['id']} date={r['tx_datetime']} type={r['exp_type']} amount={r['total_amount']} note={r.get('note')}")
+        else:
+            print(" (no expenses)")
+
+    finally:
+        conn.close()
+
+if __name__ == "__main__":
+    main()
+
+How to save & run
+
+Save the files under backend_expenses/ (same folder as app.py, models.py, database.py).
+
+Activate your backend venv:
+
+Windows (PowerShell):
+
+cd C:\path\to\monexa\backend_expenses
+. .venv\Scripts\Activate.ps1
+
+
+AlmaLinux:
+
+cd /path/to/monexa/backend_expenses
+source .venv/bin/activate
+
+
+Run the bootstrap script (create tables):
+
+python bootstrap_db.py
+# Output: "Creating database tables... Done."
+
+
+Verify with db_browser:
+
+python db_browser.py
+# Prints DB path, totals, top categories, last 5 expenses

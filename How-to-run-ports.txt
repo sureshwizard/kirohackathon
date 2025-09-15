@@ -1,0 +1,4 @@
+python -m uvicorn backend_expenses.app:app --host 0.0.0.0 --port 8000 --reload
+python -m uvicorn backend_ingest.app:app --host 0.0.0.0 --port 8001 --reload
+
+C:\sqlite\sqlite-tools>sqlite3 c:/business/21-projects/monexa/data/Finance.db

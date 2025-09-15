@@ -1,0 +1,8 @@
+5) public/ assets notes
+
+Put your logo and favicon here:
+
+frontend/public/monexa-logo.png — the 1920×1080 PNG you requested (used in index.html).
+
+frontend/public/favicon.ico — optional small icon.
+You can copy any image file into public/. Vite serves these at /monexa-logo.png and /favicon.ico.

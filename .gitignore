@@ -1,0 +1,32 @@
+# Python / Virtual environment
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.env
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs / caches
+*.log
+.cache/
+*.pid
+
+# Project-specific ignores
+monexa/*.txt
+monexa/youtube/
+monexa/help/
+monexa/docs/
+monexa/backend_expenses/*.txt
+monexa/backend_expenses/help/
+backend_ingest/*.txt
+backend_ingest/help/
+
+# Node/Frontend ignores
+frontend/node_modules/
+frontend/.next/
+frontend/dist/
+frontend/build/

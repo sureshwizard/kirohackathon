@@ -1,0 +1,4 @@
+tx_datetime,exp_type,total_amount,note,txn_id
+2025-09-14T10:30:12,gpay,450.00,"Big Bazaar",GPAY-001
+2025-09-14T11:05:30,gpay,60.50,"Auto Driver",GPAY-002
+2025-09-13T09:12:05,gpay,-1200.00,"Movie Theatre Refund",GPAY-003

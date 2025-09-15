@@ -1,0 +1,35 @@
+# ===============================
+# Monexa Project Launcher (PowerShell)
+# ===============================
+
+# Project root
+$ProjectRoot = "C:\BUSINESS\21-Projects\monexa"
+$VenvPath    = "$ProjectRoot\.venv\Scripts\Activate.ps1"
+
+Write-Host "Launching Monexa Services..." -ForegroundColor Cyan
+
+# --- Expenses API (8000) ---
+Start-Process powershell -ArgumentList @(
+    "-NoExit",
+    "-Command",
+    "Set-Location '$ProjectRoot'; . '$VenvPath'; python -m uvicorn backend_expenses.app:app --host 0.0.0.0 --port 8000 --reload"
+) -WindowStyle Normal -WorkingDirectory $ProjectRoot -Verb RunAs -Wait:$false
+
+# --- Ingest API (8001) ---
+Start-Process powershell -ArgumentList @(
+    "-NoExit",
+    "-Command",
+    "Set-Location '$ProjectRoot'; . '$VenvPath'; python -m uvicorn backend_ingest.app:app --host 0.0.0.0 --port 8001 --reload"
+) -WindowStyle Normal -WorkingDirectory $ProjectRoot -Verb RunAs -Wait:$false
+
+# --- Frontend React (3000) ---
+Start-Process powershell -ArgumentList @(
+    "-NoExit",
+    "-Command",
+    "Set-Location '$ProjectRoot\frontend'; npm start"
+) -WindowStyle Normal -WorkingDirectory "$ProjectRoot\frontend" -Verb RunAs -Wait:$false
+
+Write-Host "✅ All Monexa services launched: 
+ - Expenses API (http://localhost:8000)
+ - Ingest API   (http://localhost:8001)
+ - Frontend     (http://localhost:3000)" -ForegroundColor Green

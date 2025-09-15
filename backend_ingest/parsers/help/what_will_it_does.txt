@@ -1,0 +1,9 @@
+✅ With this, backend_ingest can:
+
+Parse CSVs/text for Amazon, GPay, Paytm, PhonePe, banks (India/US/Canada), generic
+
+Preview before import
+
+Insert into shared SQLite DB
+
+Run dedupe preview
