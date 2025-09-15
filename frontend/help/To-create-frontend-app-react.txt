@@ -1,8 +1,0 @@
-to create frontend app with react go to the project directory
-monexa> npm create vite@latest frontend
-monexa> npm install -g npm@11.6.0 (optional if asked)
-monexa> npm install
-monexa> npm run dev
-
-npm install react react-dom react-router-dom axios chart.js react-chartjs-2
-npm install -D @types/react @types/react-dom @types/react-router-dom typescript

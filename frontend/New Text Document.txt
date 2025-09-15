@@ -1,6 +1,0 @@
-cd frontend
-npm install recharts
-
-
-
-yarn add recharts

@@ -1,6 +1,0 @@
-(.venv) C:\BUSINESS\21-Projects\monexa>python
-Python 3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)] on win32
-Type "help", "copyright", "credits" or "license" for more information.
->>> from backend_expenses import database
->>> dir(database)
-['Base', 'SQLALCHEMY_DATABASE_URL', 'SessionLocal', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'create_engine', 'declarative_base', 'engine', 'sessionmaker']
